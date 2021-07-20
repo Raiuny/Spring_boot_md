@@ -95,6 +95,8 @@ Spring的底层注解@import，给容器中导入一个组件，导入的组件�
 会给容器中导入非常多的自动配置类（xxxAutoConfiguration）:给容器中导入这个场景需要的所有组件，并配置好这些组件；
 有了自动配置类，就免去了手动编写配置注入功能组件等的工作
 ## Spring Initializer快速创建Spring Boot项目
-
-
+- resources文件夹中目录结构
+    - static: 保留所有静态资源； js, css, images;
+    - templates: 保留所有的模板页面；（Spring Boot默认jar包使用嵌入式的Tomcat, 默认不支持JSP页面）；可以使用模板引擎（freemarker、thymeleaf）
+    - application.properties：Spring Boot应用配置文件
 
