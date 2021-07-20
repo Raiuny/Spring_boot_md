@@ -104,6 +104,155 @@ Spring的底层注解@import，给容器中导入一个组件，导入的组件�
   - 使用缩进表示层级关系
   - 以空格的缩进来控制层级关系
   - 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
-  - 大小写敏感
+  - 属性和值大小写敏感
   - Key: value 表示一对键值对（空格必须有）
+  - 字符串默认不用加单引号或双引号
 
+- 对象、map：
+  - key: value
+```yml
+friends:
+    lastName: zhangsan
+    age: 20
+```
+行内写法：
+```yml
+friends: {lastName: zhangsan, age: 20}
+```
+
+- 数组：
+```yml
+pets: 
+ - cat
+ - dog
+ - bird
+```
+行内写法：
+```yml
+pets: [cat, dog, bird]
+```
+
+### 配置文件值注入
+- 配置文件
+```yml
+person:
+  lastName: zhangsan
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1: v1, k2: v2}
+  lists:
+    - heihei
+    - haha
+    - kuakua
+  dog:
+    name: 小白
+    age: 2
+```
+```java
+package com.raiuny.test.bean;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 将配置文件中配置的每一个属性的值映射到这个组件中
+ * @ConfigurationProperties: 告诉Spring Boot将本类中的所有属性和配置文件中相关的配置进行绑定
+ * 只有这个组件是容器中的组件，才能用容器提供的@ConfigurationProperties的功能
+ */
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {
+    private String lastName;
+    private Integer age;
+    private Boolean boss;
+    private Date birth;
+
+    private Map<String, Object> maps;
+    private List<Object> lists;
+    private Dog dog;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", boss=" + boss +
+                ", birth=" + birth +
+                ", maps=" + maps +
+                ", lists=" + lists +
+                ", dog=" + dog +
+                '}';
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Boolean getBoss() {
+        return boss;
+    }
+
+    public void setBoss(Boolean boss) {
+        this.boss = boss;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+    public Map<String, Object> getMaps() {
+        return maps;
+    }
+
+    public void setMaps(Map<String, Object> maps) {
+        this.maps = maps;
+    }
+
+    public List<Object> getLists() {
+        return lists;
+    }
+
+    public void setLists(List<Object> lists) {
+        this.lists = lists;
+    }
+
+    public Dog getDog() {
+        return dog;
+    }
+
+    public void setDog(Dog dog) {
+        this.dog = dog;
+    }
+
+}
+
+```
+需要导入配置文件处理器，因此需要加入此依赖：
+```xml
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+ </dependency>
+```

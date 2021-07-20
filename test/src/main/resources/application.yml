@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+person:
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1: v1, k2: v2}
+  lists:
+    - heihei
+    - haha
+    - kuakua
+  dog:
+    name: 小白
+    age: 2
+  last-name: 张三
