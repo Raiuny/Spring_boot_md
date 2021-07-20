@@ -32,7 +32,7 @@
 
     <build>
         <plugins>
-<!--            springboot项目打包编译的插件-->
+<!-- springboot项目打包编译的插件，打包成jar包-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
