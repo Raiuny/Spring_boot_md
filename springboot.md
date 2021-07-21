@@ -256,3 +256,127 @@ public class Person {
             <optional>true</optional>
  </dependency>
 ```
+
+### @Value获取值和@ConfigurationProperties的区别
+- @ConfigurationProperties 
+    - 可以批量注入文件中的属性
+    - 支持松散语法绑定：lastName等价于last-name
+    - 不支持SpEL
+    - 支持JSR303数据校验，@Validated注解Person，注入时候会校验 @Email可以注解某个属性，让其必须是指定格式
+
+
+- @Value
+    - 必须一个个指定
+    - 支持SpEL，Spring表达式语言 `${person.lastName}` 但 `${person.maps}`复杂类型的数据无法提取，而@ConfigurationPropeties可以
+    - 不支持JSR303数据校验
+
+- 如果我们只是在某个业务逻辑中需要获取一下配置文件中的某项值，则使用@Value。`@Value(person.lastName)private String name;`之后直接使用name即可。
+- 如果我们专门编写了一个javaBean来和配置文件进行映射，我们就直接使用@ConfigurationProperties;`@Autowired
+    Person person1;`来得到配置的那个对象信息，不用一个个注入每一个属性，方便快捷。
+
+
+### @ConfigurationProperties
+- 与@Bean结合，为属性赋值
+- 与@PropertySource(只能用于properties文件)结合，读取指定文件
+
+### @ImportResource 读取外部配置文件
+导入Spring的配置文件，让配置文件里面的内容生效
+```java
+@ImportResource(locations = {"classpath:beans.xml"})
+@PropertySource(value = {"classpath:person.properties"})
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {...}
+```
+这种方式太麻烦了，Spring有自己推荐的读取配置文件的方式
+### @PropertySource 加载指定的配置文件
+```java
+@PropertySource(value = {"classpath:person.properties"})
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {...}
+```
+### Spring推荐给容器中添加组件的方式
+不推荐自己编写Spring的配置文件，而只需要自己编写一个配置类即可。
+1. **配置类替代了Spring配置文件beans.xml**
+2. **使用@Bean给容器添加组件，组件名为@Bean对应的方法名**
+
+myAppConfig.java文件
+```java
+package com.raiuny.test.config;
+
+import com.raiuny.test.service.HelloService;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @Configuration告诉SpringBoot该文件定义的类为一个配置类，来替代Spring配置文件。、
+ * 在配置文件中用<bean></bean>标签添加组件
+ */
+@Configuration
+public class myAppConfig {
+    //将方法的返回值添加到容器中，容器中这个组件默认的id就是方法名
+    @Bean
+    public HelloService helloService(){
+        System.out.println("配置类，通过@Bean给容器添加组件了");
+        return new HelloService();
+    }
+}
+```
+需要自己定义一个配置类HelloService.
+
+3. **通过ioc可以查看容器中是否添加了该组件**
+```java 
+    @Autowired
+    ApplicationContext ioc;
+
+    @Test
+    public void testHelloService(){
+        boolean b = ioc.containsBean("helloService");
+        System.out.println(b);
+    }
+``` 
+
+### 配置文件占位符
+#### RandomValuePropertySource 配置文件中使用随机数
+- 配置文件中可以使用随机数，通过：
+   - ${random.value}
+   - ${random.int}
+   - ${random.long}
+   - ${random.int(10)}
+   - ${random.int[1024,65536]}
+#### 属性配置占位符
+```java
+app.name=MyApp
+app.description=${app.name} is a Spring Boot application 
+```
+- 可以在配置文件中引用前面配置过的属性（优先级：前面配置过的这里都能使用）
+- ${app.name:默认值}来指定找不到属性时的默认值
+ 
+## Profile
+1. 多Profile文件 
+    - 在主配置文件编写的时候，文件名可以是 application-{profile}.properties/yml
+    - 默认使用application.properties的配置；
+    - spring.profiles.acive = _profile_name，激活指定profile；
+    - 如果用yml文件，可以用代码块来做：
+```yml
+server:
+  port: 8081
+spring: 
+  profiles: 
+    active: prod
+---
+server:
+  port: 8083
+spring: 
+  profiles: dev
+---
+server:
+  port: 8090
+spring:
+  profiles: prod
+```
+
+- 命令行激活java -jar xxx.jar --spring.profiles.active=dev（program arguments）
+- 虚拟机参数：(VM options) -Dspring.profiles.acive=dev
+- 配置文件加载位置：优先级：file:./config/ > file:./ > classpath:/config/ > classpath:/，高优先级的配置会==覆盖==低优先级的配置。

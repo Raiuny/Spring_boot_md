@@ -1,6 +1,8 @@
 package com.raiuny.test.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -11,7 +13,9 @@ import java.util.Map;
  * 将配置文件中配置的每一个属性的值映射到这个组件中
  * @ConfigurationProperties: 告诉Spring Boot将本类中的所有属性和配置文件中相关的配置进行绑定
  * 只有这个组件是容器中的组件，才能用容器提供的@ConfigurationProperties的功能
+ * 默认指向全局配置文件
  */
+@PropertySource(value = {"classpath:person.properties"})
 @Component
 @ConfigurationProperties(prefix = "person")
 public class Person {
