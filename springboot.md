@@ -380,3 +380,18 @@ spring:
 - 命令行激活java -jar xxx.jar --spring.profiles.active=dev（program arguments）
 - 虚拟机参数：(VM options) -Dspring.profiles.acive=dev
 - 配置文件加载位置：优先级：file:./config/ > file:./ > classpath:/config/ > classpath:/，高优先级的配置会==覆盖==低优先级的配置。
+- 也可以通过配置spring.config.location来改变默认配置文件的位置
+
+2. 外部配置加载顺序
+- 命令行参数：--server.port=8090
+- 来自java:comp/env的JNDI属性
+- java系统属性
+- 操作系统环境变量
+- RandomValuePropertySource配置的random.*属性值
+- jar包外部的application-{profile}.properties或application.yml（带spring.profile）配置文件 （jar包外自己新建一个配置文件）
+- jar包内部的application-{profile}.properties或application.yml（带spring.profile）配置文件（main路径下）
+- jar包外部的application.properties或application.yml（不带spring.profile）配置文件
+- jar包内部的application.properties或application.yml（不带spring.profile）配置文件
+- @Configuration注解类上的@PropertySource
+- 通过SpringApplication.setDefaultProperties指定的默认属性
+- 同样是高优先级的配置覆盖低优先级配置，不同则互补
