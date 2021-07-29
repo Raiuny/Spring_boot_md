@@ -1,0 +1,19 @@
+obj:
+  name: xiaoming
+  age: 18
+  likes:
+    - dog
+    - cat
+    - bird
+    - girl
+server:
+  port: 8090
+  servlet:
+    jsp:
+      init-parameters:
+        development: true #开启jsp页面的开发模式，修改jsp页面无需重启应用
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
