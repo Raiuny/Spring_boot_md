@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b01810f-1131-4b6d-bb6a-5cc78d0b0b99" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/../Restful_app/src/main/java/com/example/restful_app/controller/v1/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Restful_app/src/main/java/com/example/restful_app/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/controller/BooksController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/controller/UsersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/mapper/BooksMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/mapper/UsersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/pojo/Books.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/pojo/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/service/BooksService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/java/com/raiuny/server/service/UsersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/resources/config/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/resources/mapper/BooksMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leaneat-server/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learneat-generator/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learneat-generator/src/main/java/com/raiuny/generator/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learneat-generator/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/controller/UserRegController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/utils/VerifyCodeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/resources/com/raiuny/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot数据库的使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot数据库的使用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/SpringbootMybatisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/java/com/raiuny/springboot_mybatis/SpringbootMybatisApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_mybatis/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_mybatis/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot_mybatis/src/test/java/com/raiuny/springboot_mybatis/SpringbootMybatisApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot_mybatis/src/test/java/com/raiuny/springboot_mybatis/SpringbootMybatisApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\apache-maven-3.6.1\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1w3dsQIOuNqklmmbRAGj5VtRBNd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="jbr-11" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/vue_demo/fruits" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SpringBoot_Projects\learneat\leaneat-server\src\main\java\com\raiuny\server\service\" />
+      <recent name="D:\SpringBoot_Projects\learneat\leaneat-server\src\main\java\com\raiuny\server\service\iml" />
+      <recent name="D:\SpringBoot_Projects\learneat\leaneat-server\src\main\java\com\raiuny\server\controller" />
+      <recent name="D:\SpringBoot_Projects\learneat\leaneat-server\src\main\java\com\raiuny\server\mapper" />
+      <recent name="D:\SpringBoot_Projects\learneat\leaneat-server\src\main\resources\mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SpringBoot_Projects\learneat\leaneat-server\src\main\resources\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.CodeGenerator">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.raiuny.generator.CodeGenerator" />
+      <module name="learneat-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.raiuny.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.raiuny.generator.Generator" />
+      <module name="learneat-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.raiuny.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LearneatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="learneat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.learneat.LearneatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.CodeGenerator" />
+        <item itemvalue="应用程序.Generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="3b01810f-1131-4b6d-bb6a-5cc78d0b0b99" name="默认变更列表" comment="" />
+      <created>1627691415824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627691415824</updated>
+      <workItem from="1627691419101" duration="15100000" />
+      <workItem from="1627777487014" duration="9155000" />
+      <workItem from="1627801463109" duration="47000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

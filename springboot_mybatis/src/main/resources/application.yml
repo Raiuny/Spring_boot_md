@@ -1,1 +1,20 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
 
+
+
+#  整合mybatis相关配置
+#   druid
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://nj-cynosdbmysql-grp-2evx0i57.sql.tencentcdb.com:29672/database_learn?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: zr&zy19950310
+mybatis:
+  mapper-locations: classpath:com/raiuny/mapper/*.xml
+  type-aliases-package: com/raiuny/springboot_mybatis/entity
+#  指定mapper配置文件位置

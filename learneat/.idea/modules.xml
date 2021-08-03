@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/leaneat-server/leaneat-server.iml" filepath="$PROJECT_DIR$/leaneat-server/leaneat-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learneat.iml" filepath="$PROJECT_DIR$/learneat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learneat-generator/learneat-generator.iml" filepath="$PROJECT_DIR$/learneat-generator/learneat-generator.iml" />
+    </modules>
+  </component>
+</project>
